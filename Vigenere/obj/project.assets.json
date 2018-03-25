@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Source\\Vigenere\\Vigenere\\Vigenere.csproj",
+      "projectUniqueName": "C:\\Source\\Vigenere\\Vigenere\\Vigenere.csproj",
       "projectName": "Vigenere",
-      "projectPath": "c:\\Source\\Vigenere\\Vigenere\\Vigenere.csproj",
+      "projectPath": "C:\\Source\\Vigenere\\Vigenere\\Vigenere.csproj",
       "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-      "outputPath": "c:\\Source\\Vigenere\\Vigenere\\obj\\",
+      "outputPath": "C:\\Source\\Vigenere\\Vigenere\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
