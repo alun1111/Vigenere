@@ -3,21 +3,21 @@ using Vigenere;
 
 namespace Tests
 {
-    public class GridLookupTests
+    public class CaesarLookupTests
     {
-        private GridLookup lookup;
+        private CaesarLookup caesar;
 
         [SetUp]
         public void Setup()
         {
-            this.lookup = new GridLookup();
+            this.caesar = new CaesarLookup();
         }
 
         [TestCase('A', 'A')]
         [TestCase('B', 'B')]
         public void Should_ReturnSameChar_When_Lookup(char input, char expected)
         {
-            char result = lookup.Lookup(input, 0);
+            char result = caesar.Lookup(input, 0);
 
             Assert.That(input, Is.EqualTo(result));
         }
@@ -27,7 +27,7 @@ namespace Tests
         [TestCase('A', 1, 'B')]
         public void Should_ReturnCorrectChar_When_LookupWithIndex(char input, char expected)
         {
-            char result = lookup.Lookup(input, 0);
+            char result = caesar.Lookup(input, 0);
 
             Assert.That(input, Is.EqualTo(result));
         }
