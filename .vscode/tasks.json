@@ -10,6 +10,16 @@
                 "${workspaceFolder}/Vigenere/Vigenere.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "buildtests",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Vigenere.Tests/Vigenere.Tests.csproj"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }

@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Vigenere;
 
 namespace Tests
 {
@@ -10,9 +11,13 @@ namespace Tests
         }
 
         [Test]
-        public void Test1()
+        public void Should_ReturnChar_When_Lookup()
         {
-            Assert.Pass();
+            var grid = new GridLookup();
+            var result = grid.Lookup('A');
+
+            Assert.That('A', Is.EqualTo('A'));
+
         }
     }
 }

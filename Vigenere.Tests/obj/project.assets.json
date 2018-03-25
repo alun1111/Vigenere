@@ -1639,6 +1639,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Vigenere/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.NETCore.App": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Vigenere.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vigenere.dll": {}
+        }
       }
     }
   },
@@ -5625,6 +5638,11 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Vigenere/1.0.0": {
+      "type": "project",
+      "path": "../Vigenere/Vigenere.csproj",
+      "msbuildProject": "../Vigenere/Vigenere.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5632,6 +5650,7 @@
       "Microsoft.NET.Test.Sdk >= 15.6.1",
       "Microsoft.NETCore.App >= 2.0.0",
       "NUnit3TestAdapter >= 3.10.0",
+      "Vigenere >= 1.0.0",
       "nunit >= 3.10.1"
     ]
   },
@@ -5642,11 +5661,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Source\\Vigenere\\Vigenere.Tests\\Vigenere.Tests.csproj",
+      "projectUniqueName": "C:\\Source\\Vigenere\\Vigenere.Tests\\Vigenere.Tests.csproj",
       "projectName": "Vigenere.Tests",
-      "projectPath": "c:\\Source\\Vigenere\\Vigenere.Tests\\Vigenere.Tests.csproj",
+      "projectPath": "C:\\Source\\Vigenere\\Vigenere.Tests\\Vigenere.Tests.csproj",
       "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-      "outputPath": "c:\\Source\\Vigenere\\Vigenere.Tests\\obj\\",
+      "outputPath": "C:\\Source\\Vigenere\\Vigenere.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5662,7 +5681,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Source\\Vigenere\\Vigenere\\Vigenere.csproj": {
+              "projectPath": "C:\\Source\\Vigenere\\Vigenere\\Vigenere.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
