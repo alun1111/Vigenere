@@ -1,10 +1,11 @@
 namespace Vigenere
 {
-    public class GridLookup : IGridLookup
+    public class CaesarLookup : ICaesarLookup
     {
-        public char Lookup(char input)
+        private Dictionary<char,char>
+        public char Lookup(char input, int index)
         {
-            throw new System.NotImplementedException();
+            return input;
         }
     }
 }

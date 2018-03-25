@@ -5,19 +5,31 @@ namespace Tests
 {
     public class GridLookupTests
     {
+        private GridLookup lookup;
+
         [SetUp]
         public void Setup()
         {
+            this.lookup = new GridLookup();
         }
 
-        [Test]
-        public void Should_ReturnChar_When_Lookup()
+        [TestCase('A', 'A', 0)]
+        [TestCase('B', 'B', 0)]
+        public void Should_ReturnSameChar_When_Lookup(char input, char expected)
         {
-            var grid = new GridLookup();
-            var result = grid.Lookup('A');
+            char result = lookup.Lookup(input);
 
-            Assert.That('A', Is.EqualTo('A'));
+            Assert.That(input, Is.EqualTo(result));
+        }
 
+
+        [TestCase('A', 0, 'A')]
+        [TestCase('A', 1, 'B')]
+        public void Should_ReturnCorrectChar_When_LookupWithIndex(char input, char expected)
+        {
+            char result = lookup.Lookup(input);
+
+            Assert.That(input, Is.EqualTo(result));
         }
     }
 }
