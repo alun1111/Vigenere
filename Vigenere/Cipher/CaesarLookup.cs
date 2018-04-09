@@ -2,7 +2,7 @@
 
 namespace Vigenere
 {
-    public class CaesarLookup : ICaesarLookup
+    public class CaesarLookup
     {
         private Dictionary<int, char> reverse = new Dictionary<int, char>()
         {
