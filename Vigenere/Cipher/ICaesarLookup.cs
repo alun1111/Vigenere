@@ -2,6 +2,6 @@
 {
     public interface ICaesarLookup
     {
-        char Lookup(char input, int index);
+        char Lookup(char character, int shift);
     }
 }

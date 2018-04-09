@@ -15,11 +15,13 @@ namespace Tests
 
         [TestCase('A', 0, 'A')]
         [TestCase('A', 1, 'B')]
-        public void Should_ReturnCorrectChar_When_LookupWithIndex(char input, char expected)
+        [TestCase('B', 0, 'B')]
+        [TestCase('&', 0, '?')]
+        public void Should_ReturnCorrectChar_When_LookupWithShift(char input, int shift, char expected)
         {
-            char result = caesar.Lookup(input, 0);
+            char result = caesar.Lookup(input, shift);
 
-            Assert.That(input, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(expected));
         }
     }
 }
