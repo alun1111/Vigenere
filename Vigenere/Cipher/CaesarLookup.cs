@@ -32,7 +32,12 @@ namespace Vigenere
                 return '?';
             }
 
-            return reverse.GetValueOrDefault((index + shift) % 27, '?'); 
+            return reverse.GetValueOrDefault((index + shift) % 27, '$'); 
+        }
+
+        public int GetIndex(char character)
+        {
+            return alphabet.GetValueOrDefault(character, -1);
         }
     }
 }

@@ -17,6 +17,9 @@ namespace Tests
         [TestCase('A', 1, 'B')]
         [TestCase('B', 0, 'B')]
         [TestCase('&', 0, '?')]
+        [TestCase(' ', 0, ' ')]
+        [TestCase(' ', 1, 'A')]
+        [TestCase(' ', -1, 'Z')]
         public void Should_ReturnCorrectChar_When_LookupWithShift(char input, int shift, char expected)
         {
             char result = caesar.Lookup(input, shift);
