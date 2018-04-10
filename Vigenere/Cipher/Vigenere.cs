@@ -1,4 +1,6 @@
 
+using System;
+
 namespace Vigenere
 {
     public class VigenereEncoder
@@ -14,6 +16,20 @@ namespace Vigenere
             for(int i = 0; i < input.Length; i++){
                 var shift = lookup.GetIndex(keyword[i % keyword.Length]);
                 output[i] = lookup.Lookup(input[i], shift);
+            }
+
+            return new string(output);
+        }
+
+        public string Decrypt(string ciphertext, string keyword)
+        {
+            char[] input = ciphertext.ToCharArray();
+            char[] inputKeyword = keyword.ToCharArray();
+            char[] output = new char[input.Length];
+
+            for(int i = 0; i < input.Length; i++){
+                var shift = lookup.GetIndex(keyword[i % keyword.Length]);
+                output[i] = lookup.Lookup(input[i], -shift);
             }
 
             return new string(output);

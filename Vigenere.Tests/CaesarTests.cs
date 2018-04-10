@@ -17,8 +17,6 @@ namespace Tests
         [TestCase("HELLO", 0, "HELLO")]
         [TestCase("HELLO", 1, "IFMMP")]
         [TestCase("HELLO HELLO", 1, "IFMMPAIFMMP")]
-        [TestCase("IFMMP", -1, "HELLO")]
-        [TestCase("IFMMPAIFMMP", -1, "HELLO HELLO")]
         public void Should_ReturnCorrectString_When_Encrypting(string plaintext, int shift, string expected)
         {
             string result = caesar.Encrypt(plaintext, shift);
